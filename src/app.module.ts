@@ -14,9 +14,19 @@ import { NotificationsModule } from './modules/notifications/notifications.modul
 import { AdminModule } from './modules/admin/admin.module';
 import { AuditModule } from './modules/audit/audit.module';
 import { HealthModule } from './modules/health/health.module';
+import { ConfigModule } from '@nestjs/config';
+import { DatabaseModule } from './database/database.module';
+import { appConfig, databaseConfig } from './config/configuration';
 
 @Module({
-  imports: [AuthModule, CustomersModule, CatalogModule, InventoryModule, CartModule, CheckoutModule, OrdersModule, PaymentsModule, ShipmentsModule, NotificationsModule, AdminModule, AuditModule, HealthModule],
+  imports: [
+    ConfigModule.forRoot({
+      isGlobal: true,
+      load: [appConfig, databaseConfig],
+      envFilePath: ['.env.local', '.env'],
+    }),
+    DatabaseModule,
+    AuthModule, CustomersModule, CatalogModule, InventoryModule, CartModule, CheckoutModule, OrdersModule, PaymentsModule, ShipmentsModule, NotificationsModule, AdminModule, AuditModule, HealthModule],
   controllers: [AppController],
   providers: [AppService],
 })
