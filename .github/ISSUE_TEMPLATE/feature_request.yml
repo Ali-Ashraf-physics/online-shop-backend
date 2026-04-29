@@ -1,0 +1,39 @@
+name: Feature request
+description: Request a backend feature or domain capability
+title: "feat: "
+labels: [enhancement]
+body:
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope and affected modules
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem to solve
+    validations:
+      required: true
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: api
+    attributes:
+      label: API contract impact
+  - type: textarea
+    id: data
+    attributes:
+      label: Database/migration impact
+  - type: textarea
+    id: security
+    attributes:
+      label: Security/audit impact
+  - type: textarea
+    id: validation
+    attributes:
+      label: Validation commands

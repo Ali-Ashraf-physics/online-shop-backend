@@ -1,0 +1,34 @@
+name: API Contract Check
+
+on:
+  pull_request:
+
+jobs:
+  api-contract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - name: Generate or validate OpenAPI contract
+        run: |
+          if pnpm run | grep -q "openapi"; then
+            pnpm openapi
+          elif pnpm run | grep -q "swagger"; then
+            pnpm swagger
+          else
+            echo "TODO: Add an OpenAPI generation/check script, e.g. pnpm openapi."
+          fi
+      - name: Orval compatibility placeholder
+        run: |
+          if pnpm run | grep -q "orval"; then
+            pnpm orval
+          else
+            echo "TODO: Add Orval validation/generation script when frontend client generation is wired."
+          fi

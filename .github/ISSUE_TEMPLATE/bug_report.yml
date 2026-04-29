@@ -1,0 +1,43 @@
+name: Bug report
+description: Report a defect in the Online Shop backend
+title: "bug: "
+labels: [bug]
+body:
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      description: Which modules/features are affected?
+      placeholder: auth, catalog, checkout, orders...
+    validations:
+      required: true
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction steps
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs/screenshots
+  - type: textarea
+    id: impact
+    attributes:
+      label: Migration/API/security impact
+      description: Mention API contract, database, or security impact if any.
+  - type: textarea
+    id: validation
+    attributes:
+      label: Validation commands
+      placeholder: pnpm lint, pnpm test, pnpm build

@@ -1,0 +1,41 @@
+name: Module task
+description: Implement or refactor a Phase 1 module contract
+title: "module: "
+labels: [module]
+body:
+  - type: input
+    id: module
+    attributes:
+      label: Module name
+      placeholder: orders
+    validations:
+      required: true
+  - type: textarea
+    id: contract
+    attributes:
+      label: Contract changes
+      description: Endpoints, DTOs, service methods, repository methods, schemas.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+    validations:
+      required: true
+  - type: textarea
+    id: api
+    attributes:
+      label: API contract impact
+  - type: textarea
+    id: migration
+    attributes:
+      label: Migration/index impact
+  - type: textarea
+    id: security
+    attributes:
+      label: Security/audit impact
+  - type: textarea
+    id: validation
+    attributes:
+      label: Validation commands

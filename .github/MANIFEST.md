@@ -1,0 +1,148 @@
+# MANIFEST.md — Generated Agent Kit
+
+Every generated file and its purpose.
+
+- `.github/ISSUE_TEMPLATE/bug_report.yml` — GitHub issue template.
+- `.github/ISSUE_TEMPLATE/feature_request.yml` — GitHub issue template.
+- `.github/ISSUE_TEMPLATE/module_task.yml` — GitHub issue template.
+- `.github/README.md` — Explains how the .github agent system works.
+- `.github/agents/api-contract.agent.md` — Specialist AI agent role definition.
+- `.github/agents/backend-agent.agent.md` — Specialist AI agent role definition.
+- `.github/agents/database-architect.agent.md` — Specialist AI agent role definition.
+- `.github/agents/devops-agent.agent.md` — Specialist AI agent role definition.
+- `.github/agents/domain-specialist.agent.md` — Specialist AI agent role definition.
+- `.github/agents/project-architect.agent.md` — Specialist AI agent role definition.
+- `.github/agents/security-reviewer.agent.md` — Specialist AI agent role definition.
+- `.github/agents/test-engineer.agent.md` — Specialist AI agent role definition.
+- `.github/copilot-instructions.md` — Repository-wide Copilot/agent instructions.
+- `.github/instructions/api/api-contract.instructions.md` — Path-specific layered instruction file with applyTo frontmatter.
+- `.github/instructions/api/codegen-compatibility.instructions.md` — Path-specific layered instruction file with applyTo frontmatter.
+- `.github/instructions/api/error-response.instructions.md` — Path-specific layered instruction file with applyTo frontmatter.
+- `.github/instructions/api/filtering-sorting.instructions.md` — Path-specific layered instruction file with applyTo frontmatter.
+- `.github/instructions/api/openapi.instructions.md` — Path-specific layered instruction file with applyTo frontmatter.
+- `.github/instructions/api/operation-id.instructions.md` — Path-specific layered instruction file with applyTo frontmatter.
+- `.github/instructions/api/pagination.instructions.md` — Path-specific layered instruction file with applyTo frontmatter.
+- `.github/instructions/api/response-dto.instructions.md` — Path-specific layered instruction file with applyTo frontmatter.
+- `.github/instructions/common/constants.instructions.md` — Path-specific layered instruction file with applyTo frontmatter.
+- `.github/instructions/common/controllers.instructions.md` — Path-specific layered instruction file with applyTo frontmatter.
+- `.github/instructions/common/dto.instructions.md` — Path-specific layered instruction file with applyTo frontmatter.
+- `.github/instructions/common/enums.instructions.md` — Path-specific layered instruction file with applyTo frontmatter.
+- `.github/instructions/common/modules.instructions.md` — Path-specific layered instruction file with applyTo frontmatter.
+- `.github/instructions/common/repositories.instructions.md` — Path-specific layered instruction file with applyTo frontmatter.
+- `.github/instructions/common/schemas.instructions.md` — Path-specific layered instruction file with applyTo frontmatter.
+- `.github/instructions/common/services.instructions.md` — Path-specific layered instruction file with applyTo frontmatter.
+- `.github/instructions/common/tests.instructions.md` — Path-specific layered instruction file with applyTo frontmatter.
+- `.github/instructions/common/utils.instructions.md` — Path-specific layered instruction file with applyTo frontmatter.
+- `.github/instructions/core/architecture.instructions.md` — Path-specific layered instruction file with applyTo frontmatter.
+- `.github/instructions/core/coding-style.instructions.md` — Path-specific layered instruction file with applyTo frontmatter.
+- `.github/instructions/core/error-handling.instructions.md` — Path-specific layered instruction file with applyTo frontmatter.
+- `.github/instructions/core/naming.instructions.md` — Path-specific layered instruction file with applyTo frontmatter.
+- `.github/instructions/core/repository.instructions.md` — Path-specific layered instruction file with applyTo frontmatter.
+- `.github/instructions/core/response-format.instructions.md` — Path-specific layered instruction file with applyTo frontmatter.
+- `.github/instructions/core/validation-checklist.instructions.md` — Path-specific layered instruction file with applyTo frontmatter.
+- `.github/instructions/deployment/backup-restore.instructions.md` — Path-specific layered instruction file with applyTo frontmatter.
+- `.github/instructions/deployment/ci.instructions.md` — Path-specific layered instruction file with applyTo frontmatter.
+- `.github/instructions/deployment/docker.instructions.md` — Path-specific layered instruction file with applyTo frontmatter.
+- `.github/instructions/deployment/monitoring.instructions.md` — Path-specific layered instruction file with applyTo frontmatter.
+- `.github/instructions/deployment/production-readiness.instructions.md` — Path-specific layered instruction file with applyTo frontmatter.
+- `.github/instructions/deployment/release.instructions.md` — Path-specific layered instruction file with applyTo frontmatter.
+- `.github/instructions/deployment/vercel.instructions.md` — Path-specific layered instruction file with applyTo frontmatter.
+- `.github/instructions/domain/business-rules.instructions.md` — Path-specific layered instruction file with applyTo frontmatter.
+- `.github/instructions/domain/data-ownership.instructions.md` — Path-specific layered instruction file with applyTo frontmatter.
+- `.github/instructions/domain/data-privacy.instructions.md` — Path-specific layered instruction file with applyTo frontmatter.
+- `.github/instructions/domain/domain-overview.instructions.md` — Path-specific layered instruction file with applyTo frontmatter.
+- `.github/instructions/domain/lifecycle-policy.instructions.md` — Path-specific layered instruction file with applyTo frontmatter.
+- `.github/instructions/domain/workflow-policy.instructions.md` — Path-specific layered instruction file with applyTo frontmatter.
+- `.github/instructions/infrastructure/caching.instructions.md` — Path-specific layered instruction file with applyTo frontmatter.
+- `.github/instructions/infrastructure/config.instructions.md` — Path-specific layered instruction file with applyTo frontmatter.
+- `.github/instructions/infrastructure/database.instructions.md` — Path-specific layered instruction file with applyTo frontmatter.
+- `.github/instructions/infrastructure/environment.instructions.md` — Path-specific layered instruction file with applyTo frontmatter.
+- `.github/instructions/infrastructure/events.instructions.md` — Path-specific layered instruction file with applyTo frontmatter.
+- `.github/instructions/infrastructure/filters.instructions.md` — Path-specific layered instruction file with applyTo frontmatter.
+- `.github/instructions/infrastructure/health.instructions.md` — Path-specific layered instruction file with applyTo frontmatter.
+- `.github/instructions/infrastructure/interceptors.instructions.md` — Path-specific layered instruction file with applyTo frontmatter.
+- `.github/instructions/infrastructure/jobs.instructions.md` — Path-specific layered instruction file with applyTo frontmatter.
+- `.github/instructions/infrastructure/logging.instructions.md` — Path-specific layered instruction file with applyTo frontmatter.
+- `.github/instructions/infrastructure/middleware.instructions.md` — Path-specific layered instruction file with applyTo frontmatter.
+- `.github/instructions/infrastructure/migrations.instructions.md` — Path-specific layered instruction file with applyTo frontmatter.
+- `.github/instructions/infrastructure/observability.instructions.md` — Path-specific layered instruction file with applyTo frontmatter.
+- `.github/instructions/infrastructure/pipes.instructions.md` — Path-specific layered instruction file with applyTo frontmatter.
+- `.github/instructions/infrastructure/queues.instructions.md` — Path-specific layered instruction file with applyTo frontmatter.
+- `.github/instructions/infrastructure/seeders.instructions.md` — Path-specific layered instruction file with applyTo frontmatter.
+- `.github/instructions/infrastructure/validators.instructions.md` — Path-specific layered instruction file with applyTo frontmatter.
+- `.github/instructions/integrations/email.instructions.md` — Path-specific layered instruction file with applyTo frontmatter.
+- `.github/instructions/integrations/external-api.instructions.md` — Path-specific layered instruction file with applyTo frontmatter.
+- `.github/instructions/integrations/file-upload.instructions.md` — Path-specific layered instruction file with applyTo frontmatter.
+- `.github/instructions/integrations/payment.instructions.md` — Path-specific layered instruction file with applyTo frontmatter.
+- `.github/instructions/integrations/sms.instructions.md` — Path-specific layered instruction file with applyTo frontmatter.
+- `.github/instructions/integrations/storage.instructions.md` — Path-specific layered instruction file with applyTo frontmatter.
+- `.github/instructions/integrations/webhook.instructions.md` — Path-specific layered instruction file with applyTo frontmatter.
+- `.github/instructions/modules/admin.instructions.md` — Concrete module implementation contract.
+- `.github/instructions/modules/audit.instructions.md` — Concrete module implementation contract.
+- `.github/instructions/modules/auth.instructions.md` — Concrete module implementation contract.
+- `.github/instructions/modules/cart.instructions.md` — Concrete module implementation contract.
+- `.github/instructions/modules/catalog.instructions.md` — Concrete module implementation contract.
+- `.github/instructions/modules/checkout.instructions.md` — Concrete module implementation contract.
+- `.github/instructions/modules/customers.instructions.md` — Concrete module implementation contract.
+- `.github/instructions/modules/health.instructions.md` — Concrete module implementation contract.
+- `.github/instructions/modules/inventory.instructions.md` — Concrete module implementation contract.
+- `.github/instructions/modules/notifications.instructions.md` — Concrete module implementation contract.
+- `.github/instructions/modules/orders.instructions.md` — Concrete module implementation contract.
+- `.github/instructions/modules/payments.instructions.md` — Concrete module implementation contract.
+- `.github/instructions/modules/shipments.instructions.md` — Concrete module implementation contract.
+- `.github/instructions/quality/code-review.instructions.md` — Path-specific layered instruction file with applyTo frontmatter.
+- `.github/instructions/quality/formatting.instructions.md` — Path-specific layered instruction file with applyTo frontmatter.
+- `.github/instructions/quality/linting.instructions.md` — Path-specific layered instruction file with applyTo frontmatter.
+- `.github/instructions/quality/performance.instructions.md` — Path-specific layered instruction file with applyTo frontmatter.
+- `.github/instructions/quality/pr-checklist.instructions.md` — Path-specific layered instruction file with applyTo frontmatter.
+- `.github/instructions/quality/security-review.instructions.md` — Path-specific layered instruction file with applyTo frontmatter.
+- `.github/instructions/quality/test-fixtures.instructions.md` — Path-specific layered instruction file with applyTo frontmatter.
+- `.github/instructions/quality/testing-e2e.instructions.md` — Path-specific layered instruction file with applyTo frontmatter.
+- `.github/instructions/quality/testing-integration.instructions.md` — Path-specific layered instruction file with applyTo frontmatter.
+- `.github/instructions/quality/testing-unit.instructions.md` — Path-specific layered instruction file with applyTo frontmatter.
+- `.github/instructions/quality/type-safety.instructions.md` — Path-specific layered instruction file with applyTo frontmatter.
+- `.github/instructions/security/audit-security.instructions.md` — Path-specific layered instruction file with applyTo frontmatter.
+- `.github/instructions/security/auth-security.instructions.md` — Path-specific layered instruction file with applyTo frontmatter.
+- `.github/instructions/security/decorators.instructions.md` — Path-specific layered instruction file with applyTo frontmatter.
+- `.github/instructions/security/guards.instructions.md` — Path-specific layered instruction file with applyTo frontmatter.
+- `.github/instructions/security/password-security.instructions.md` — Path-specific layered instruction file with applyTo frontmatter.
+- `.github/instructions/security/permissions.instructions.md` — Path-specific layered instruction file with applyTo frontmatter.
+- `.github/instructions/security/rate-limit.instructions.md` — Path-specific layered instruction file with applyTo frontmatter.
+- `.github/instructions/security/roles.instructions.md` — Path-specific layered instruction file with applyTo frontmatter.
+- `.github/instructions/security/sensitive-data.instructions.md` — Path-specific layered instruction file with applyTo frontmatter.
+- `.github/instructions/security/tenant-isolation.instructions.md` — Path-specific layered instruction file with applyTo frontmatter.
+- `.github/instructions/security/token-security.instructions.md` — Path-specific layered instruction file with applyTo frontmatter.
+- `.github/instructions/workflows/add-api-contract.instructions.md` — Path-specific layered instruction file with applyTo frontmatter.
+- `.github/instructions/workflows/add-audit-log.instructions.md` — Path-specific layered instruction file with applyTo frontmatter.
+- `.github/instructions/workflows/add-permission.instructions.md` — Path-specific layered instruction file with applyTo frontmatter.
+- `.github/instructions/workflows/add-tests.instructions.md` — Path-specific layered instruction file with applyTo frontmatter.
+- `.github/instructions/workflows/create-crud.instructions.md` — Path-specific layered instruction file with applyTo frontmatter.
+- `.github/instructions/workflows/create-dto.instructions.md` — Path-specific layered instruction file with applyTo frontmatter.
+- `.github/instructions/workflows/create-endpoint.instructions.md` — Path-specific layered instruction file with applyTo frontmatter.
+- `.github/instructions/workflows/create-module.instructions.md` — Path-specific layered instruction file with applyTo frontmatter.
+- `.github/instructions/workflows/create-schema.instructions.md` — Path-specific layered instruction file with applyTo frontmatter.
+- `.github/instructions/workflows/refactor-module.instructions.md` — Path-specific layered instruction file with applyTo frontmatter.
+- `.github/instructions/workflows/review-changes.instructions.md` — Path-specific layered instruction file with applyTo frontmatter.
+- `.github/prompts/add-api-contract.prompt.md` — Reusable prompt for repeatable AI coding workflow.
+- `.github/prompts/create-controller-endpoints.prompt.md` — Reusable prompt for repeatable AI coding workflow.
+- `.github/prompts/create-crud-resource.prompt.md` — Reusable prompt for repeatable AI coding workflow.
+- `.github/prompts/create-dto.prompt.md` — Reusable prompt for repeatable AI coding workflow.
+- `.github/prompts/create-module.prompt.md` — Reusable prompt for repeatable AI coding workflow.
+- `.github/prompts/create-permissions.prompt.md` — Reusable prompt for repeatable AI coding workflow.
+- `.github/prompts/create-schema.prompt.md` — Reusable prompt for repeatable AI coding workflow.
+- `.github/prompts/create-service-methods.prompt.md` — Reusable prompt for repeatable AI coding workflow.
+- `.github/prompts/create-tests.prompt.md` — Reusable prompt for repeatable AI coding workflow.
+- `.github/prompts/refactor-to-project-conventions.prompt.md` — Reusable prompt for repeatable AI coding workflow.
+- `.github/prompts/review-api-contract.prompt.md` — Reusable prompt for repeatable AI coding workflow.
+- `.github/prompts/review-module.prompt.md` — Reusable prompt for repeatable AI coding workflow.
+- `.github/prompts/review-security.prompt.md` — Reusable prompt for repeatable AI coding workflow.
+- `.github/pull_request_template.md` — Pull request checklist template.
+- `.github/workflows/api-contract-check.yml` — GitHub Actions validation workflow.
+- `.github/workflows/build.yml` — GitHub Actions validation workflow.
+- `.github/workflows/ci.yml` — GitHub Actions validation workflow.
+- `.github/workflows/lint.yml` — GitHub Actions validation workflow.
+- `.github/workflows/pr-checks.yml` — GitHub Actions validation workflow.
+- `.github/workflows/security-check.yml` — GitHub Actions validation workflow.
+- `.github/workflows/test.yml` — GitHub Actions validation workflow.
+- `AGENTS.md` — Root-level instructions for AI coding agents.
+- `.github/MANIFEST.md` — This inventory of generated files.
