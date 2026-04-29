@@ -30,4 +30,4 @@ import { appConfig, databaseConfig } from './config/configuration';
   controllers: [AppController],
   providers: [AppService],
 })
-export class AppModule {}
+export class AppModule { }
