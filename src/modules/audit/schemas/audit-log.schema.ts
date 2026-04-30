@@ -2,7 +2,7 @@ import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document, Schema as MongooseSchema } from 'mongoose';
 import { AuditAction } from '../enums/audit-action.enum';
 
-export type AuditLogDocument = AuditLog & Document;
+export type AuditLogDocument = AuditLog & Document & { createdAt?: Date };
 
 @Schema({ timestamps: { createdAt: true, updatedAt: false } })
 export class AuditLog {
