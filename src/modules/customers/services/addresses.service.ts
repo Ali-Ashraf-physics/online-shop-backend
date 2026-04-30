@@ -1,7 +1,9 @@
 import { Injectable, NotFoundException, ForbiddenException } from '@nestjs/common';
 import { AddressesRepository } from '../repositories/addresses.repository';
 import { CustomersRepository } from '../repositories/customers.repository';
-import { CreateAddressDto, UpdateAddressDto, AddressResponseDto } from '../dto/address.dto';
+import { CreateAddressDto } from '../dto/create-address.dto';
+import { UpdateAddressDto } from '../dto/update-address.dto';
+import { AddressResponseDto } from '../dto/address-response.dto';
 
 @Injectable()
 export class AddressesService {

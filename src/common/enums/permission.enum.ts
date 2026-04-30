@@ -3,7 +3,9 @@ export enum Permission {
     MANAGE_USERS = 'manage:users',
     MANAGE_PRODUCTS = 'manage:products',
     MANAGE_ORDERS = 'manage:orders',
+    MANAGE_INVENTORY = 'manage:inventory',
     MANAGE_SYSTEM = 'manage:system',
+    ADMIN_DASHBOARD_READ = 'admin:dashboard:read',
 
     // Customer permissions
     VIEW_PRODUCTS = 'view:products',

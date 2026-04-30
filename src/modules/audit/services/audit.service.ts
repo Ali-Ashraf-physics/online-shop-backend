@@ -2,6 +2,7 @@ import { Injectable, Logger } from '@nestjs/common';
 import { AuditLogRepository } from '../repositories/audit-log.repository';
 import { AuditAction } from '../enums/audit-action.enum';
 import { AuditLogQueryDto } from '../dto/audit-log-query.dto';
+import { AuditLogListResponseDto, AuditLogResponseDto } from '../dto/audit-log-response.dto';
 
 @Injectable()
 export class AuditService {
@@ -54,13 +55,30 @@ export class AuditService {
         }
     }
 
-    async findAuditLogs(query: AuditLogQueryDto) {
-        const [items, total] = await this.repository.findMany(query);
+    private mapAuditLog(log: import('../schemas/audit-log.schema').AuditLogDocument): AuditLogResponseDto {
         return {
-            data: items,
-            total,
-            skip: query.skip || 0,
-            limit: query.limit || 50,
+            id: log._id.toString(),
+            action: log.action,
+            actorId: log.actorId,
+            actorType: log.actorType,
+            resourceId: log.resourceId,
+            resourceType: log.resourceType,
+            metadata: log.metadata,
+            beforeState: log.beforeState,
+            afterState: log.afterState,
+            createdAt: log.createdAt?.toISOString() ?? new Date().toISOString(),
+        };
+    }
+
+    async findAuditLogs(query: AuditLogQueryDto): Promise<AuditLogListResponseDto> {
+        const [items, total] = await this.repository.findMany(query);
+        const page = query.page ?? 1;
+        const limit = query.limit ?? 50;
+        const totalPages = Math.max(1, Math.ceil(total / limit));
+
+        return {
+            items: items.map((item) => this.mapAuditLog(item)),
+            meta: { total, page, limit, totalPages },
         };
     }
 }

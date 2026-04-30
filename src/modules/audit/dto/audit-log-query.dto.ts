@@ -29,12 +29,12 @@ export class AuditLogQueryDto {
     @IsEnum(AuditAction)
     action?: AuditAction;
 
-    @ApiProperty({ required: false, default: 0 })
+    @ApiProperty({ required: false, default: 1 })
     @IsOptional()
     @Type(() => Number)
     @IsNumber()
-    @Min(0)
-    skip?: number;
+    @Min(1)
+    page?: number;
 
     @ApiProperty({ required: false, default: 50 })
     @IsOptional()

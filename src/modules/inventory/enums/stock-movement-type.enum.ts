@@ -1,0 +1,6 @@
+export enum StockMovementType {
+    ADJUSTMENT = 'ADJUSTMENT',
+    RESERVATION = 'RESERVATION',
+    RELEASE = 'RELEASE',
+    CONSUMPTION = 'CONSUMPTION',
+}

@@ -1,7 +1,8 @@
 import { Controller, Get, Patch, Body, Req, UseGuards } from '@nestjs/common';
 import { ApiTags, ApiOperation, ApiResponse, ApiBearerAuth } from '@nestjs/swagger';
 import { CustomersService } from '../services/customers.service';
-import { UpdateCustomerDto, CustomerResponseDto } from '../dto/customer.dto';
+import { UpdateCustomerDto } from '../dto/update-customer.dto';
+import { CustomerResponseDto } from '../dto/customer-response.dto';
 import { JwtAuthGuard } from '../../../common/guards/jwt-auth.guard';
 
 @ApiTags('Customers')

@@ -1,6 +1,8 @@
 import { Injectable, NotFoundException, ConflictException } from '@nestjs/common';
 import { CustomersRepository } from '../repositories/customers.repository';
-import { CreateCustomerDto, UpdateCustomerDto, CustomerResponseDto } from '../dto/customer.dto';
+import { CreateCustomerDto } from '../dto/create-customer.dto';
+import { UpdateCustomerDto } from '../dto/update-customer.dto';
+import { CustomerResponseDto } from '../dto/customer-response.dto';
 
 @Injectable()
 export class CustomersService {

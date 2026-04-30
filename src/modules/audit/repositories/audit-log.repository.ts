@@ -14,7 +14,8 @@ export class AuditLogRepository {
     }
 
     async findMany(queryDto: AuditLogQueryDto): Promise<[AuditLogDocument[], number]> {
-        const { skip = 0, limit = 50, actorId, actorType, resourceId, resourceType, action } = queryDto;
+        const { page = 1, limit = 50, actorId, actorType, resourceId, resourceType, action } = queryDto;
+        const skip = (page - 1) * limit;
 
         const filter: Record<string, unknown> = {};
         if (actorId) filter.actorId = actorId;

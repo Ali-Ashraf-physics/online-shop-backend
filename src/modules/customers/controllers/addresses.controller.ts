@@ -1,7 +1,9 @@
 import { Controller, Get, Post, Patch, Delete, Body, Param, Req, UseGuards, HttpCode, HttpStatus } from '@nestjs/common';
 import { ApiTags, ApiOperation, ApiResponse, ApiBearerAuth } from '@nestjs/swagger';
 import { AddressesService } from '../services/addresses.service';
-import { CreateAddressDto, UpdateAddressDto, AddressResponseDto } from '../dto/address.dto';
+import { CreateAddressDto } from '../dto/create-address.dto';
+import { UpdateAddressDto } from '../dto/update-address.dto';
+import { AddressResponseDto } from '../dto/address-response.dto';
 import { JwtAuthGuard } from '../../../common/guards/jwt-auth.guard';
 
 @ApiTags('Addresses')
