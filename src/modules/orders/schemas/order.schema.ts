@@ -35,7 +35,7 @@ export class Order {
     @Prop({ required: true })
     currency: string;
 
-    @Prop({ required: true })
+    @Prop({ required: true, unique: true })
     idempotencyKey: string;
 }
 
