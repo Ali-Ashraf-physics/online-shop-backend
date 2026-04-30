@@ -1,6 +1,6 @@
 import { ApiProperty } from '@nestjs/swagger';
 
 export class AppStatusResponseDto {
-    @ApiProperty()
+    @ApiProperty({ example: 'Hello World!', description: 'API status message' })
     message: string;
 }
