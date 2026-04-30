@@ -1,5 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { HealthCheckService, MongooseHealthIndicator } from '@nestjs/terminus';
+import { HealthResponseDto } from './dto/health-response.dto';
+import { HealthReadinessResponseDto } from './dto/health-readiness-response.dto';
 
 @Injectable()
 export class HealthService {
@@ -8,7 +10,7 @@ export class HealthService {
         private db: MongooseHealthIndicator,
     ) { }
 
-    getHealth(): { status: string; uptime: number; timestamp: string } {
+    getHealth(): HealthResponseDto {
         return {
             status: 'ok',
             uptime: process.uptime(),
@@ -16,7 +18,7 @@ export class HealthService {
         };
     }
 
-    async getReadiness() {
+    async getReadiness(): Promise<HealthReadinessResponseDto> {
         return this.health.check([
             () => this.checkDatabase(),
         ]);

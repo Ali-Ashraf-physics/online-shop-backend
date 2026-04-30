@@ -1,4 +1,4 @@
-import { Controller, Get, Req, UseGuards } from '@nestjs/common';
+import { Controller, Get, UseGuards } from '@nestjs/common';
 import { ApiBearerAuth, ApiOperation, ApiResponse, ApiTags } from '@nestjs/swagger';
 import { AdminDashboardService } from '../services/admin-dashboard.service';
 import { AdminDashboardResponseDto } from '../dto/admin-dashboard-response.dto';
@@ -18,7 +18,7 @@ export class AdminDashboardController {
     @RequirePermissions(Permission.ADMIN_DASHBOARD_READ)
     @ApiOperation({ summary: 'Get admin dashboard stats', operationId: 'getAdminDashboard' })
     @ApiResponse({ status: 200, type: AdminDashboardResponseDto })
-    async getDashboard(@Req() req: { user: { sub: string } }): Promise<AdminDashboardResponseDto> {
-        return this.dashboardService.getDashboardStats({ user: { sub: req.user.sub } });
+    async getDashboard(): Promise<AdminDashboardResponseDto> {
+        return this.dashboardService.getDashboardStats();
     }
 }
